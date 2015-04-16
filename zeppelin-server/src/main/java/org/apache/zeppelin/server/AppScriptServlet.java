@@ -83,7 +83,7 @@ public class AppScriptServlet extends DefaultServlet {
     int endIndex = script.indexOf("}", startIndex);
 
     if (startIndex >= 0 && endIndex >= 0) {
-      String replaceString = "function getPort(){return " + websocketPort + "}";
+      String replaceString = "function getPort(){ return 8080 }";
       script.replace(startIndex, endIndex + 1, replaceString);
     }
 
